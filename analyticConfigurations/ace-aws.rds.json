@@ -1,0 +1,153 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "AWS RDS",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "RDS",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "aws.rds.cpuutilization",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.rds.databaseconnections",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.rds.diskqueuedepth",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.rds.freestoragespace",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.rds.freeablememory",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.rds.readiops",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.rds.readlatency",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.rds.readthroughput",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.rds.swapusage",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.rds.writeiops",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.rds.writelatency",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.rds.writethroughput",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.rds.networkreceivethroughput",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.rds.networktransmitthroughput",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.rds.totalthroughput",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.rds.totaliops",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.rds.averagereadsize",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.rds.averagewritesize",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.rds.connectionutilizationpercent",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.rds.diskspacepercentused",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.rds.iopsutilization",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.rds.overallutilization",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "Utilization",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    } ]
+  }
+}

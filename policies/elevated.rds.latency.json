@@ -1,0 +1,53 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Elevated RDS Latency",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "RDS",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "aws.rds.readlatency",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.readlatency",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.writelatency",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.writelatency",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.rds.totalthroughput",
+      "wildcard" : null,
+      "analytic" : "actual",
+      "operator" : ">=",
+      "level" : 1000.0
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 3
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

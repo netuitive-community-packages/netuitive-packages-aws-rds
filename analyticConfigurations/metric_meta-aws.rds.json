@@ -1,0 +1,39 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "AWS RDS",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "RDS",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "netuitive.aws.rds.diskspacepercentused",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "aws.rds.cpuutilization",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.aws.rds\\..*utilization.*",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    } ]
+  }
+}

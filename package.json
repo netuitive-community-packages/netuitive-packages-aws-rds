@@ -1,0 +1,63 @@
+{
+  "id" : "netuitive.packages.aws.rds",
+  "version" : "1.0.0",
+  "manifest" : {
+    "name" : "Netuitive Packages AWS RDS",
+    "description" : "A set of Netuitive analytics configurations, polices, dashboards and reports that are used to monitor AWS RDS performance",
+    "author" : {
+      "name" : "Netuitive Research",
+      "email" : "research@netuitive.com"
+    },
+    "distro" : {
+      "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-aws-rds/archive/master.zip"
+    },
+    "compatibility" : [ "AWS" ],
+    "tags" : [ ],
+    "checksum" : null
+  },
+  "policies" : [ {
+    "data" : {
+      "file" : "policies/elevated.rds.cpu.activity.(normal.network.activity).json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/elevated.rds.network.activity.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/elevated.rds.disk.activity.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/elevated.rds.latency.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "analyticConfigurations" : [ {
+    "data" : {
+      "file" : "analyticConfigurations/ace-aws.rds.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-aws.rds.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-aws.rds.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
+}

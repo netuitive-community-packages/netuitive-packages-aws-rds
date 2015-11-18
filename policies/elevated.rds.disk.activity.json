@@ -1,0 +1,47 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Elevated RDS Disk Activity",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "RDS",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "aws.rds.readiops",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.readiops",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.writeiops",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.writeiops",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 1
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}
