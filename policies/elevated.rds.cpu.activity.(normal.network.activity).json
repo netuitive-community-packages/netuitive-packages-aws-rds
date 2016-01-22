@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Elevated RDS CPU Activity (Normal Network Activity)",
-    "description" : null,
+    "description" : "Increases in CPU activity are not uncommon when there is a rise in network activity. Increased traffic to a server means more work for that server to do. This policy is designed to catch cases where CPU activity is higher than than normal, and said behavior cannot be explained by a corresponding increase in network traffic. It may or may not represent a problem, but it is useful to know about. ",
     "scope" : {
       "elementName" : "",
       "elementType" : "RDS",
@@ -10,6 +10,18 @@
     },
     "duration" : 1800,
     "conditions" : [ {
+      "metric" : "aws.rds.networktransmitthroughput",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : "undefined",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.networktransmitthroughput",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : "undefined",
+      "level" : null
+    }, {
       "metric" : "aws.rds.cpuutilization",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
@@ -29,18 +41,6 @@
       "level" : null
     }, {
       "metric" : "aws.rds.networkreceivethroughput",
-      "wildcard" : null,
-      "analytic" : "contextualDeviation",
-      "operator" : "undefined",
-      "level" : null
-    }, {
-      "metric" : "aws.rds.networktransmitthroughput",
-      "wildcard" : null,
-      "analytic" : "baselineDeviation",
-      "operator" : "undefined",
-      "level" : null
-    }, {
-      "metric" : "aws.rds.networktransmitthroughput",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : "undefined",
@@ -49,8 +49,12 @@
     "actions" : [ {
       "type" : "event",
       "category" : 1
+    }, {
+      "type" : "notification",
+      "id" : 23513,
+      "enabled" : true
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

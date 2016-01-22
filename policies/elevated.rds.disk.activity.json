@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Elevated RDS Disk Activity",
-    "description" : null,
+    "description" : "Indicates an increase in disk activity above what is considered to be normal.",
     "scope" : {
       "elementName" : "",
       "elementType" : "RDS",
@@ -37,8 +37,12 @@
     "actions" : [ {
       "type" : "event",
       "category" : 1
+    }, {
+      "type" : "notification",
+      "id" : 23513,
+      "enabled" : true
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

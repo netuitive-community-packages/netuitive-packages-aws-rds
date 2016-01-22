@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Elevated RDS Network Activity",
-    "description" : null,
+    "description" : "Indicates an increase in network activity above what is considered to be normal.",
     "scope" : {
       "elementName" : "",
       "elementType" : "RDS",
@@ -10,25 +10,25 @@
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "aws.rds.networkreceivethroughput",
+      "metric" : "aws.rds.networktransmitthroughput",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "aws.rds.networkreceivethroughput",
+      "metric" : "aws.rds.networktransmitthroughput",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "aws.rds.networktransmitthroughput",
+      "metric" : "aws.rds.networkreceivethroughput",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "aws.rds.networktransmitthroughput",
+      "metric" : "aws.rds.networkreceivethroughput",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
@@ -37,8 +37,12 @@
     "actions" : [ {
       "type" : "event",
       "category" : 1
+    }, {
+      "type" : "notification",
+      "id" : 23513,
+      "enabled" : true
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

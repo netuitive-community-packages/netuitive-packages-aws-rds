@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Elevated RDS Latency",
-    "description" : null,
+    "description" : "This policy will generate a Critical event when both read and write latency is higher than normal for half an hour or longer. Note that there must also be a minimum number of requests for this policy to trigger; this is because with too few requests, the average can tend to be skewed by outliers. The default request threshold is 1,000; you may wish to tune this for your environment.",
     "scope" : {
       "elementName" : "",
       "elementType" : "RDS",
@@ -10,18 +10,6 @@
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "aws.rds.readlatency",
-      "wildcard" : null,
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null
-    }, {
-      "metric" : "aws.rds.readlatency",
-      "wildcard" : null,
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null
-    }, {
       "metric" : "aws.rds.writelatency",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
@@ -39,12 +27,28 @@
       "analytic" : "actual",
       "operator" : ">=",
       "level" : 1000.0
+    }, {
+      "metric" : "aws.rds.readlatency",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "aws.rds.readlatency",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
     } ],
     "actions" : [ {
       "type" : "event",
       "category" : 3
+    }, {
+      "type" : "notification",
+      "id" : 23513,
+      "enabled" : true
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
