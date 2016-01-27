@@ -1,8 +1,8 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Elevated RDS CPU Activity (Normal Network Activity)",
-    "description" : "Increases in CPU activity are not uncommon when there is a rise in network activity. Increased traffic to a server means more work for that server to do. This policy is designed to catch cases where CPU activity is higher than than normal, and said behavior cannot be explained by a corresponding increase in network traffic. It may or may not represent a problem, but it is useful to know about. ",
+    "name" : "AWS RDS - Elevated Network Activity",
+    "description" : "Indicates an increase in network activity above what is considered to be normal.",
     "scope" : {
       "elementName" : "",
       "elementType" : "RDS",
@@ -13,37 +13,25 @@
       "metric" : "aws.rds.networktransmitthroughput",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
-      "operator" : "undefined",
+      "operator" : ">",
       "level" : null
     }, {
       "metric" : "aws.rds.networktransmitthroughput",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
-      "operator" : "undefined",
-      "level" : null
-    }, {
-      "metric" : "aws.rds.cpuutilization",
-      "wildcard" : null,
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null
-    }, {
-      "metric" : "aws.rds.cpuutilization",
-      "wildcard" : null,
-      "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null
     }, {
       "metric" : "aws.rds.networkreceivethroughput",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
-      "operator" : "undefined",
+      "operator" : ">",
       "level" : null
     }, {
       "metric" : "aws.rds.networkreceivethroughput",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
-      "operator" : "undefined",
+      "operator" : ">",
       "level" : null
     } ],
     "actions" : [ {

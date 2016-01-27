@@ -18,25 +18,25 @@
   },
   "policies" : [ {
     "data" : {
-      "file" : "policies/elevated.rds.cpu.activity.(normal.network.activity).json",
+      "file" : "policies/aws.rds.-.elevated.cpu.activity.(normal.network.activity).json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.rds.disk.activity.json",
+      "file" : "policies/aws.rds.-.elevated.disk.activity.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.rds.latency.json",
+      "file" : "policies/aws.rds.-.elevated.latency.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.rds.network.activity.json",
+      "file" : "policies/aws.rds.-.elevated.network.activity.json",
       "encoding" : "application/json",
       "content" : null
     }

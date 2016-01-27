@@ -1,8 +1,8 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Elevated RDS Latency",
-    "description" : "This policy will generate a Critical event when both read and write latency is higher than normal for half an hour or longer. Note that there must also be a minimum number of requests for this policy to trigger; this is because with too few requests, the average can tend to be skewed by outliers. The default request threshold is 1,000; you may wish to tune this for your environment.",
+    "name" : "AWS RDS - Elevated Disk Activity",
+    "description" : "Indicates an increase in disk activity above what is considered to be normal.",
     "scope" : {
       "elementName" : "",
       "elementType" : "RDS",
@@ -10,31 +10,25 @@
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "aws.rds.writelatency",
+      "metric" : "aws.rds.readiops",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "aws.rds.writelatency",
+      "metric" : "aws.rds.readiops",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "netuitive.aws.rds.totalthroughput",
-      "wildcard" : null,
-      "analytic" : "actual",
-      "operator" : ">=",
-      "level" : 1000.0
-    }, {
-      "metric" : "aws.rds.readlatency",
+      "metric" : "aws.rds.writeiops",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "aws.rds.readlatency",
+      "metric" : "aws.rds.writeiops",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
@@ -42,7 +36,7 @@
     } ],
     "actions" : [ {
       "type" : "event",
-      "category" : 3
+      "category" : 1
     }, {
       "type" : "notification",
       "id" : 23513,
