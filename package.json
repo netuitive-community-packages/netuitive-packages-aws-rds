@@ -60,7 +60,7 @@
       "content" : null
     }
   } ],
-  "dashboards" : [ , {
+  "dashboards" : [ {
     "data" : {
       "file" : "dashboards/aws.rds.summary.json",
       "encoding" : "application/json",
