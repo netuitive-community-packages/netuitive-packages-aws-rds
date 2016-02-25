@@ -1,6 +1,13 @@
-#netuitive.packages.aws.rds 1.1.0
+netuitive.packages.aws.rds 1.1.1
+----------------------
+
+#netuitive.packages.aws.rds 1.1.1
 
 ##Release History
+
+###Version 1.1.1
+
+* Removed reference to obsolete metric.
 
 ###Version 1.1.0
 
