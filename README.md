@@ -1,7 +1,4 @@
-netuitive.packages.aws.rds 1.2.0
-----------------------
-
-#netuitive.packages.aws.rds 1.1.1
+#netuitive.packages.aws.rds 1.2.0
 
 ##Release History
 
