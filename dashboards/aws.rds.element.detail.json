@@ -158,6 +158,32 @@
       "created" : "2016-03-11T00:53:54Z",
       "updated" : "2016-03-11T00:55:09Z"
     }, {
+      "id" : "890cb6f8-695e-40f4-a008-7316c7d781ad",
+      "name" : "Swap Usage",
+      "description" : null,
+      "widgetType" : "metric-time-series",
+      "properties" : {
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "element_id" : "5359c0f4-5b4b-3adc-bf09-1d80c6ccbaa6",
+        "elementScopeTypes" : "[]",
+        "metricLimit" : "10",
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "showHighest" : "true",
+        "metric_fqn" : "aws.rds.swapusage",
+        "width" : "auto",
+        "metrics" : "[]",
+        "selectedTab" : "table"
+      },
+      "dashboardId" : null,
+      "userId" : null,
+      "created" : "2016-03-11T00:52:43Z",
+      "updated" : "2016-03-11T00:52:43Z"
+    }, {
       "id" : "8ff852fe-b0ed-43b1-adac-67bb0db720da",
       "name" : "Disk Space Percent Used",
       "description" : null,
@@ -188,8 +214,8 @@
       "created" : "2016-03-11T00:52:22Z",
       "updated" : "2016-03-11T00:56:07Z"
     }, {
-      "id" : "890cb6f8-695e-40f4-a008-7316c7d781ad",
-      "name" : "Swap Usage",
+      "id" : "096c7404-3e5c-4ee4-b347-c728164508fd",
+      "name" : "Total Throughput",
       "description" : null,
       "widgetType" : "metric-time-series",
       "properties" : {
@@ -204,15 +230,15 @@
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "showHighest" : "true",
-        "metric_fqn" : "aws.rds.swapusage",
+        "metric_fqn" : "netuitive.aws.rds.totalthroughput",
         "width" : "auto",
         "metrics" : "[]",
         "selectedTab" : "table"
       },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-11T00:52:43Z",
-      "updated" : "2016-03-11T00:52:43Z"
+      "created" : "2016-03-11T00:51:59Z",
+      "updated" : "2016-03-11T00:51:59Z"
     }, {
       "id" : "9c7c3632-58a3-4022-ae20-b930943d1bdc",
       "name" : "Connection Utilization",
@@ -243,32 +269,6 @@
       "userId" : null,
       "created" : "2016-03-11T00:54:15Z",
       "updated" : "2016-03-11T00:55:46Z"
-    }, {
-      "id" : "096c7404-3e5c-4ee4-b347-c728164508fd",
-      "name" : "Total Throughput",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : "5359c0f4-5b4b-3adc-bf09-1d80c6ccbaa6",
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.rds.totalthroughput",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      },
-      "dashboardId" : null,
-      "userId" : null,
-      "created" : "2016-03-11T00:51:59Z",
-      "updated" : "2016-03-11T00:51:59Z"
     }, {
       "id" : "f0e7e0c4-5868-4002-a2c0-92f19983a114",
       "name" : "IOPS Utilization",
