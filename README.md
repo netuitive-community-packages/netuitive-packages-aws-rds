@@ -3,7 +3,8 @@
 ##Release History
 
 ###Version 1.3.0
-* Added RDS-specific element detail summary page.
+* Added RDS-specific element detail page.
+* Changed "sum" to "avg" on summary dashboard widgets.
 
 ###Version 1.2.0
 
