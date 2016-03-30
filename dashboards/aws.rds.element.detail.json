@@ -102,36 +102,6 @@
       "created" : "2016-03-10T23:59:41Z",
       "updated" : "2016-03-16T21:04:53Z"
     }, {
-      "id" : "2174b795-782e-4d1a-86f6-aee3036919b5",
-      "name" : "Overall Utilization",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : "5359c0f4-5b4b-3adc-bf09-1d80c6ccbaa6",
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.rds.overallutilization",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      },
-      "dashboardId" : null,
-      "userId" : null,
-      "created" : "2016-03-11T00:53:54Z",
-      "updated" : "2016-03-11T00:55:09Z"
-    }, {
       "id" : "0debfab0-27cd-460a-bd81-46aeb4797145",
       "name" : "Component Utilizations",
       "description" : null,
@@ -161,6 +131,36 @@
       "userId" : null,
       "created" : "2016-03-16T21:04:02Z",
       "updated" : "2016-03-16T21:05:55Z"
+    }, {
+      "id" : "2174b795-782e-4d1a-86f6-aee3036919b5",
+      "name" : "Overall Utilization",
+      "description" : null,
+      "widgetType" : "metric-time-series",
+      "properties" : {
+        "visualization" : null,
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "element_id" : "5359c0f4-5b4b-3adc-bf09-1d80c6ccbaa6",
+        "elementScopeTypes" : "[]",
+        "metricLimit" : "10",
+        "metricUnit" : null,
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "groupName" : null,
+        "elementNameContains" : null,
+        "showHighest" : "true",
+        "metric_fqn" : "netuitive.aws.rds.overallutilization",
+        "width" : "medium",
+        "metrics" : "[]",
+        "selectedTab" : "table"
+      },
+      "dashboardId" : null,
+      "userId" : null,
+      "created" : "2016-03-11T00:53:54Z",
+      "updated" : "2016-03-11T00:55:09Z"
     }, {
       "id" : "57125871-eafa-4da4-a992-d4058da217a4",
       "name" : "Events",
