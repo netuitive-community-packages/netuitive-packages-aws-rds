@@ -1,8 +1,13 @@
-#netuitive.packages.aws.rds 1.3.0
+#netuitive.packages.aws.rds 1.3.1
 
 ##Release History
 
+###Version 1.3.1
+
+* Minor cleanup to the RDS Overview dashboard.
+
 ###Version 1.3.0
+
 * Added RDS-specific element detail page.
 * Changed "sum" to "avg" on summary dashboard widgets.
 
