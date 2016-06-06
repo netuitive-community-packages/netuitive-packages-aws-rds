@@ -167,17 +167,25 @@
       "description" : null,
       "widgetType" : "event-ticker",
       "properties" : {
+        "visualization" : null,
         "showElementTotal" : "true",
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "true",
-        "elementScopeTypes" : "[]",
+        "useAllElementScopeTags" : "false",
+        "element_id" : null,
+        "elementScopeTypes" : "[\"RDS\"]",
         "metricLimit" : "10",
+        "useAllMetricScopeTags" : "false",
+        "metricUnit" : null,
         "metricAggs" : "[]",
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
-        "elementNameContains" : "netuitive-research-rds",
+        "groupName" : null,
+        "elementNameContains" : "",
         "showHighest" : "true",
+        "metric_fqn" : null,
+        "metricScopeTags" : "[]",
         "width" : "auto",
         "metrics" : "[]",
         "selectedTab" : "table"
@@ -185,7 +193,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-03-16T21:16:43Z",
-      "updated" : "2016-03-16T21:16:43Z"
+      "updated" : "2016-05-16T19:30:37Z"
     }, {
       "id" : "1e1ad076-2448-449e-8023-7c9c5996ad6c",
       "name" : "Current Overall Utilization",
