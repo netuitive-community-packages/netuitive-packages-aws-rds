@@ -130,13 +130,13 @@
         "metric_fqn" : null,
         "metricScopeTags" : "[]",
         "width" : "auto",
-        "metrics" : "[{\"fqn\":\"netuitive.aws.rds.connectionutilizationpercent\",\"aggFns\":[]},{\"fqn\":\"netuitive.aws.rds.iopsutilization\",\"aggFns\":[]},{\"fqn\":\"aws.rds.cpuutilization\",\"aggFns\":[\"avg\"]}]",
+        "metrics" : "[{\"fqn\":\"netuitive.aws.rds.iopsutilization\",\"aggFns\":[]},{\"fqn\":\"aws.rds.cpuutilization\",\"aggFns\":[\"avg\"]},{\"fqn\":\"netuitive.aws.rds.connectionthroughpututilizationpercent\",\"aggFn\":\"avg\",\"aggFns\":[]}]",
         "selectedTab" : "table"
       },
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-03-16T21:04:02Z",
-      "updated" : "2016-07-03T20:09:08Z"
+      "updated" : "2016-07-03T20:36:19Z"
     }, {
       "id" : "2174b795-782e-4d1a-86f6-aee3036919b5",
       "name" : "Overall Utilization",
