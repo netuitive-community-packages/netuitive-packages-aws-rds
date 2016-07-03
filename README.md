@@ -1,8 +1,19 @@
-#netuitive.packages.aws.rds 1.3.2
+#netuitive.packages.aws.rds 1.4.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.4.0
+
+* Renamed the "Connection Utilization Percent" metric to "Connection Throughput Utilization" to make it clearer that this metric is measuring how utilized the capacity of the connections is, not what percentage of the total available connections are in use.
+* Removed correlation flag from the "Overall Utilization" metric, since this metric is a linear combination of the other utilization metrics.
+* Baseline and correlate "Read IOPS" and "Write IOPS" rather than "Total IOPS". This allows us to more reliably catch an incident where, for example, read is excessively high and write is excessively low, or vice versa.
+* Added three new policies:
+ * AWS RDS - Elevated Connections
+ * AWS RDS - Elevated Read IOPS
+ * AWS RDS - Elevated Write IOPS
+* Fixed a bug where some widgets were not displaying correctly on the element detail page.
 
 ###Version 1.3.2
 
