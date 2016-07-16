@@ -43,8 +43,8 @@
     }, {
       "match" : "aws.rds.readiops",
       "properties" : {
-        "baseline" : false,
-        "correlation" : false
+        "baseline" : true,
+        "correlation" : true
       }
     }, {
       "match" : "aws.rds.readlatency",
@@ -67,8 +67,8 @@
     }, {
       "match" : "aws.rds.writeiops",
       "properties" : {
-        "baseline" : false,
-        "correlation" : false
+        "baseline" : true,
+        "correlation" : true
       }
     }, {
       "match" : "aws.rds.writelatency",
@@ -103,8 +103,8 @@
     }, {
       "match" : "netuitive.aws.rds.totaliops",
       "properties" : {
-        "baseline" : true,
-        "correlation" : true
+        "baseline" : false,
+        "correlation" : false
       }
     }, {
       "match" : "netuitive.aws.rds.averagereadsize",
@@ -119,7 +119,7 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.aws.rds.connectionutilizationpercent",
+      "match" : "netuitive.aws.rds.connectionthroughpututilizationpercent",
       "properties" : {
         "baseline" : true,
         "correlation" : true
@@ -140,7 +140,7 @@
       "match" : "netuitive.aws.rds.overallutilization",
       "properties" : {
         "baseline" : true,
-        "correlation" : true
+        "correlation" : false
       }
     } ]
   }

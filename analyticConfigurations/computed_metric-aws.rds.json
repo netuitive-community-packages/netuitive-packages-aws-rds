@@ -39,11 +39,11 @@
         "name" : "Average Write Size"
       }
     }, {
-      "match" : "netuitive.aws.rds.connectionutilizationpercent",
+      "match" : "netuitive.aws.rds.connectionthroughpututilizationpercent",
       "properties" : {
         "expression" : "data['aws.rds.databaseconnections'].actual == 0 ? 0 : 100 * (data['aws.rds.readlatency'].actual * data['aws.rds.readiops'].actual + data['aws.rds.writelatency'].actual * data['aws.rds.writeiops'].actual) / data['aws.rds.databaseconnections'].actual",
-        "fqn" : "netuitive.aws.rds.connectionutilizationpercent",
-        "name" : "Connection Utilization Percent"
+        "fqn" : "netuitive.aws.rds.connectionthroughpututilizationpercent",
+        "name" : "Connection Throughput Utilization Percent"
       }
     }, {
       "match" : "netuitive.aws.rds.diskspacepercentused",
@@ -62,7 +62,7 @@
     }, {
       "match" : "netuitive.aws.rds.overallutilization",
       "properties" : {
-        "expression" : "Math.min(100, Math.max(data['netuitive.aws.rds.connectionutilizationpercent'].actual, data['aws.rds.cpuutilization'].actual, data['netuitive.aws.rds.iopsutilization'].actual))",
+        "expression" : "Math.min(100, Math.max(data['netuitive.aws.rds.connectionthroughpututilizationpercent'].actual, data['aws.rds.cpuutilization'].actual, data['netuitive.aws.rds.iopsutilization'].actual))",
         "fqn" : "netuitive.aws.rds.overallutilization",
         "name" : "Overall Utilization"
       }
