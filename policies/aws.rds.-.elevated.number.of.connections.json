@@ -5,6 +5,9 @@
     "description" : "The number of database connections open on the RDS instance is higher than expected.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "RDS",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "aws.rds.databaseconnections",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null,
@@ -21,6 +25,7 @@
     }, {
       "metric" : "aws.rds.databaseconnections",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null,
@@ -28,6 +33,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 2
