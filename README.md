@@ -1,8 +1,12 @@
-#netuitive.packages.aws.rds 1.4.2
+#netuitive.packages.aws.rds 1.4.3
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.4.3
+
+* Updated the CPU Utilization policy to not alarm when CPU is under 20%.
 
 ###Version 1.4.2
 
