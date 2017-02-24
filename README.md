@@ -1,8 +1,12 @@
-#netuitive.packages.aws.rds 1.4.3
+#netuitive.packages.aws.rds 1.5.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
 ##Release History
+
+###Version 1.5.0
+
+* Updated dashboard layouts for gridstack.
 
 ###Version 1.4.3
 
