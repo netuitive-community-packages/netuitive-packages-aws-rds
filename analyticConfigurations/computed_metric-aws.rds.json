@@ -56,7 +56,7 @@
     }, {
       "match" : "netuitive.aws.rds.iopsutilization",
       "properties" : {
-        "expression" : "Math.min(100, ( !attribute['iops'].value ? (data['netuitive.aws.rds.totaliops'].actual / 300) : (data['netuitive.aws.rds.totaliops'].actual / attribute['iops'].value))*100)",
+        "expression" : "Math.min(100, data['netuitive.aws.rds.totaliops'].actual * 100 / (!attribute['iops'].value ? (attribute['allocatedStorage'].value * 3 < 100 ? 100 : (attribute['allocatedStorage'].value * 3 > 10000 ? 10000 : attribute['allocatedStorage'].value * 3)) : attribute['iops'].value))",
         "fqn" : "netuitive.aws.rds.iopsutilization",
         "name" : "IOPS Utilization"
       }
