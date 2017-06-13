@@ -1,8 +1,12 @@
-# netuitive.packages.aws.rds 1.5.0
+# netuitive.packages.aws.rds
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
 ## Release History
+
+### Version 1.5.1
+
+* Fixed the IOPS utilization calculation to take into account storage size
 
 ### Version 1.5.0
 

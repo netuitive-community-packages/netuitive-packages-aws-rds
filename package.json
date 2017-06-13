@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.aws.rds",
-  "version" : "1.5.0",
+  "version" : "1.5.1",
   "manifest" : {
     "name" : "Netuitive Packages AWS RDS",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of AWS Relational Database Service (RDS) resources.",
