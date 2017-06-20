@@ -60,13 +60,6 @@
         "fqn" : "netuitive.aws.rds.iopsutilization",
         "name" : "IOPS Utilization"
       }
-    }, {
-      "match" : "netuitive.aws.rds.overallutilization",
-      "properties" : {
-        "expression" : "Math.min(100, Math.max(data['netuitive.aws.rds.connectionthroughpututilizationpercent'].actual, data['aws.rds.cpuutilization'].actual, data['netuitive.aws.rds.iopsutilization'].actual))",
-        "fqn" : "netuitive.aws.rds.overallutilization",
-        "name" : "Overall Utilization"
-      }
     } ]
   }
 }
