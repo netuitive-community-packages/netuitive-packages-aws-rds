@@ -140,7 +140,7 @@
       "updated" : "2016-07-03T20:36:19Z"
     }, {
       "id" : "2174b795-782e-4d1a-86f6-aee3036919b5",
-      "name" : "Overall Utilization",
+      "name" : "IOPS Utilization",
       "description" : null,
       "widgetType" : "metric-time-series",
       "properties" : {
@@ -159,7 +159,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.rds.overallutilization",
+        "metric_fqn" : "netuitive.aws.rds.iopsutilization",
         "width" : "medium",
         "metrics" : "[]",
         "selectedTab" : "table"
@@ -203,7 +203,7 @@
       "updated" : "2016-05-16T19:30:37Z"
     }, {
       "id" : "1e1ad076-2448-449e-8023-7c9c5996ad6c",
-      "name" : "Current Overall Utilization",
+      "name" : "Current Connection Throughput Utilization",
       "description" : null,
       "widgetType" : "metric-status",
       "properties" : {
@@ -219,7 +219,7 @@
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.rds.overallutilization",
+        "metric_fqn" : "netuitive.aws.rds.connectionthroughpututilizationpercent",
         "width" : "auto",
         "metrics" : "[]",
         "selectedTab" : "table"
