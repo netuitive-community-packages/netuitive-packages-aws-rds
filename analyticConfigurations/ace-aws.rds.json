@@ -137,12 +137,6 @@
         "baseline" : true,
         "correlation" : true
       }
-    }, {
-      "match" : "netuitive.aws.rds.overallutilization",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : false
-      }
     } ]
   }
 }

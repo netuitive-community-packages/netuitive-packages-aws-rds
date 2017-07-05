@@ -19,7 +19,7 @@
     "updated" : "2016-04-28T20:24:57Z",
     "widgets" : [ {
       "id" : "f8528f06-031e-4310-8a3e-d3350fe91761",
-      "name" : "Highest Overall Utilization",
+      "name" : "Highest Connection Throughput Utilization",
       "description" : null,
       "widgetType" : "high-low-metric",
       "properties" : {
@@ -38,7 +38,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.rds.overallutilization",
+        "metric_fqn" : "netuitive.aws.rds.connectionthroughpututilizationpercent",
         "width" : "auto",
         "metrics" : "[]",
         "selectedTab" : "graph"
