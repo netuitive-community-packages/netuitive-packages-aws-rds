@@ -4,6 +4,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 1.5.2
+
 * Removed overall utilization computed metric and associated widgets
 * Replaced overall utilization dashboard and element detail widgets with individual component utilizations
 
