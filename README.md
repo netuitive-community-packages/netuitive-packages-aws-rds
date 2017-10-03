@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+* Updated element details dashboard layout
+
 ### Version 1.5.2
 
 * Removed overall utilization computed metric and associated widgets
