@@ -1,65 +1,67 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "COMPUTED_METRIC",
-    "id" : null,
-    "packageId" : null,
-    "name" : "AWS RDS",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "RDS",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.aws.rds.totalthroughput",
+        "properties": {
+          "expression": "data['aws.rds.readthroughput'].actual + data['aws.rds.writethroughput'].actual",
+          "fqn": "netuitive.aws.rds.totalthroughput",
+          "name": "Total Throughput"
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.totaliops",
+        "properties": {
+          "expression": "data['aws.rds.readiops'].actual + data['aws.rds.writeiops'].actual",
+          "fqn": "netuitive.aws.rds.totaliops",
+          "name": "Total IOPS"
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.averagereadsize",
+        "properties": {
+          "expression": "data['aws.rds.readiops'].actual == 0 ? 0 : data['aws.rds.readthroughput'].actual / data['aws.rds.readiops'].actual",
+          "fqn": "netuitive.aws.rds.averagereadsize",
+          "name": "Average Read Size"
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.averagewritesize",
+        "properties": {
+          "expression": "data['aws.rds.writeiops'].actual == 0 ? 0 : data['aws.rds.writethroughput'].actual / data['aws.rds.writeiops'].actual",
+          "fqn": "netuitive.aws.rds.averagewritesize",
+          "name": "Average Write Size"
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.connectionthroughpututilizationpercent",
+        "properties": {
+          "expression": "data['aws.rds.databaseconnections'].actual == 0 ? 0 : 100 * (data['aws.rds.readlatency'].actual * data['aws.rds.readiops'].actual + data['aws.rds.writelatency'].actual * data['aws.rds.writeiops'].actual) / data['aws.rds.databaseconnections'].actual",
+          "fqn": "netuitive.aws.rds.connectionthroughpututilizationpercent",
+          "name": "Connection Throughput Utilization Percent"
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.diskspacepercentused",
+        "properties": {
+          "expression": "((attribute['allocatedStorage'].value - (data['aws.rds.freestoragespace'].actual/1024/1024/1024)) / attribute['allocatedStorage'].value) * 100",
+          "fqn": "netuitive.aws.rds.diskspacepercentused",
+          "name": "Disk Space Percent Used"
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.iopsutilization",
+        "properties": {
+          "expression": "Math.min(100, data['netuitive.aws.rds.totaliops'].actual * 100 / (!attribute['iops'].value ? (attribute['allocatedStorage'].value * 3 < 100 ? 100 : (attribute['allocatedStorage'].value * 3 > 10000 ? 10000 : attribute['allocatedStorage'].value * 3)) : attribute['iops'].value))",
+          "fqn": "netuitive.aws.rds.iopsutilization",
+          "name": "IOPS Utilization"
+        }
+      }
+    ],
+    "name": "AWS RDS",
+    "scope": {
+      "elementType": "RDS"
     },
-    "metrics" : [ {
-      "match" : "netuitive.aws.rds.totalthroughput",
-      "properties" : {
-        "expression" : "data['aws.rds.readthroughput'].actual + data['aws.rds.writethroughput'].actual",
-        "fqn" : "netuitive.aws.rds.totalthroughput",
-        "name" : "Total Throughput"
-      }
-    }, {
-      "match" : "netuitive.aws.rds.totaliops",
-      "properties" : {
-        "expression" : "data['aws.rds.readiops'].actual + data['aws.rds.writeiops'].actual",
-        "fqn" : "netuitive.aws.rds.totaliops",
-        "name" : "Total IOPS"
-      }
-    }, {
-      "match" : "netuitive.aws.rds.averagereadsize",
-      "properties" : {
-        "expression" : "data['aws.rds.readiops'].actual == 0 ? 0 : data['aws.rds.readthroughput'].actual / data['aws.rds.readiops'].actual",
-        "fqn" : "netuitive.aws.rds.averagereadsize",
-        "name" : "Average Read Size"
-      }
-    }, {
-      "match" : "netuitive.aws.rds.averagewritesize",
-      "properties" : {
-        "expression" : "data['aws.rds.writeiops'].actual == 0 ? 0 : data['aws.rds.writethroughput'].actual / data['aws.rds.writeiops'].actual",
-        "fqn" : "netuitive.aws.rds.averagewritesize",
-        "name" : "Average Write Size"
-      }
-    }, {
-      "match" : "netuitive.aws.rds.connectionthroughpututilizationpercent",
-      "properties" : {
-        "expression" : "data['aws.rds.databaseconnections'].actual == 0 ? 0 : 100 * (data['aws.rds.readlatency'].actual * data['aws.rds.readiops'].actual + data['aws.rds.writelatency'].actual * data['aws.rds.writeiops'].actual) / data['aws.rds.databaseconnections'].actual",
-        "fqn" : "netuitive.aws.rds.connectionthroughpututilizationpercent",
-        "name" : "Connection Throughput Utilization Percent"
-      }
-    }, {
-      "match" : "netuitive.aws.rds.diskspacepercentused",
-      "properties" : {
-        "expression" : "((attribute['allocatedStorage'].value - (data['aws.rds.freestoragespace'].actual/1024/1024/1024)) / attribute['allocatedStorage'].value) * 100",
-        "fqn" : "netuitive.aws.rds.diskspacepercentused",
-        "name" : "Disk Space Percent Used"
-      }
-    }, {
-      "match" : "netuitive.aws.rds.iopsutilization",
-      "properties" : {
-        "expression" : "Math.min(100, data['netuitive.aws.rds.totaliops'].actual * 100 / (!attribute['iops'].value ? (attribute['allocatedStorage'].value * 3 < 100 ? 100 : (attribute['allocatedStorage'].value * 3 > 10000 ? 10000 : attribute['allocatedStorage'].value * 3)) : attribute['iops'].value))",
-        "fqn" : "netuitive.aws.rds.iopsutilization",
-        "name" : "IOPS Utilization"
-      }
-    } ]
+    "type": "COMPUTED_METRIC"
   }
 }

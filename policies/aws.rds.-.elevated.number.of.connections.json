@@ -1,48 +1,30 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS RDS - Elevated Number of Connections",
-    "description" : "The number of database connections open on the RDS instance is higher than expected.",
-    "scope" : {
-      "elementName" : "",
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "RDS",
-      "elementTags" : { }
-    },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : "aws.rds.databaseconnections",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "aws.rds.databaseconnections",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "aws.rds.databaseconnections",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "aws.rds.databaseconnections",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "The number of database connections open on the RDS instance is higher than expected.",
+    "duration": 900,
+    "enabled": true,
+    "name": "AWS RDS - Elevated Number of Connections",
+    "scope": {
+      "elementType": "RDS"
+    }
   }
 }

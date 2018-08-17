@@ -1,127 +1,137 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "AWS RDS",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "RDS",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.aws.rds.diskspacepercentused",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.rds.cpuutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.aws.rds\\..*utilization.*",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.rds.binlogdiskusage",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.rds.freestoragespace",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.rds.freeablememory",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.rds.swapusage",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.averagereadsize",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.averagewritesize",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "netuitive.aws.rds.totaliops",
+        "properties": {
+          "tags": {
+            "unit": "iops"
+          }
+        }
+      },
+      {
+        "match": "aws.rds.readiops",
+        "properties": {
+          "tags": {
+            "unit": "rps"
+          }
+        }
+      },
+      {
+        "match": "aws.rds.writeiops",
+        "properties": {
+          "tags": {
+            "unit": "wps"
+          }
+        }
+      },
+      {
+        "match": "aws.rds.replicalag",
+        "properties": {
+          "tags": {
+            "unit": "s"
+          }
+        }
+      },
+      {
+        "match": "aws.rds.*latency",
+        "properties": {
+          "tags": {
+            "unit": "s"
+          }
+        }
+      },
+      {
+        "match": ".*aws.rds.*throughput",
+        "properties": {
+          "tags": {
+            "unit": "Bps"
+          }
+        }
+      }
+    ],
+    "name": "AWS RDS",
+    "scope": {
+      "elementType": "RDS"
     },
-    "metrics" : [ {
-      "match" : "netuitive.aws.rds.diskspacepercentused",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.rds.cpuutilization",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.aws.rds\\..*utilization.*",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.rds.binlogdiskusage",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.rds.freestoragespace",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.rds.freeablememory",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.rds.swapusage",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "netuitive.aws.rds.averagereadsize",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "netuitive.aws.rds.averagewritesize",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "netuitive.aws.rds.totaliops",
-      "properties" : {
-        "tags" : {
-          "unit" : "iops"
-        }
-      }
-    }, {
-      "match" : "aws.rds.readiops",
-      "properties" : {
-        "tags" : {
-          "unit" : "rps"
-        }
-      }
-    }, {
-      "match" : "aws.rds.writeiops",
-      "properties" : {
-        "tags" : {
-          "unit" : "wps"
-        }
-      }
-    }, {
-      "match" : "aws.rds.replicalag",
-      "properties" : {
-        "tags" : {
-          "unit" : "s"
-        }
-      }
-    }, {
-      "match" : "aws.rds.*latency",
-      "properties" : {
-        "tags" : {
-          "unit" : "s"
-        }
-      }
-    }, {
-      "match" : ".*aws.rds.*throughput",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }
