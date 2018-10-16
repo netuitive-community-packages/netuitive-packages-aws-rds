@@ -45,7 +45,7 @@
       }
     ],
     "deleted": false,
-    "description": "Increases in CPU activity are not uncommon when there is a rise in network activity. Increased traffic to a server means more work for that server to do. This policy is designed to catch cases where CPU activity is higher than than normal, and said behavior cannot be explained by a corresponding increase in network traffic. It may or may not represent a problem, but it is useful to know about.  This policy will not raise an event if CPU is under 20%.",
+    "description": "Increases in CPU activity are not uncommon when there is a rise in network activity. Increased traffic to a server means more work for that server to do. This policy is designed to catch cases where CPU activity is higher than normal and said behavior cannot be explained by a corresponding increase in network traffic. It may or may not represent a problem, but it is useful to know about.  This policy will not raise an event if CPU is under 20%.",
     "duration": 1800,
     "enabled": true,
     "name": "AWS RDS - Elevated CPU Activity (Normal Network Activity)",
