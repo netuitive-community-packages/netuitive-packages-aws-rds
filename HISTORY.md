@@ -2,6 +2,7 @@
 
 ### Version next
 
+* Convert computed metrics to new format
 * Adjusted build to use metricly-cli for validation
 
 ### Version 1.6.0
