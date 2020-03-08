@@ -39,7 +39,9 @@
     "enabled": true,
     "name": "AWS RDS - Elevated Network Activity",
     "scope": {
-      "elementType": "RDS"
+      "elementTypes": [
+        "RDS"
+      ]
     }
   }
 }

@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "AWS RDS - Elevated Write IOPS",
     "scope": {
-      "elementType": "RDS"
+      "elementTypes": [
+        "RDS"
+      ]
     }
   }
 }

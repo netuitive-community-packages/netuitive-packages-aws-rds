@@ -50,7 +50,9 @@
     "enabled": true,
     "name": "AWS RDS - Elevated CPU Activity (Normal Network Activity)",
     "scope": {
-      "elementType": "RDS"
+      "elementTypes": [
+        "RDS"
+      ]
     }
   }
 }

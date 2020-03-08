@@ -45,7 +45,9 @@
     "enabled": true,
     "name": "AWS RDS - Elevated Latency",
     "scope": {
-      "elementType": "RDS"
+      "elementTypes": [
+        "RDS"
+      ]
     }
   }
 }
