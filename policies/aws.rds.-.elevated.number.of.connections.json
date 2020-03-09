@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "AWS RDS - Elevated Number of Connections",
     "scope": {
-      "elementType": "RDS"
+      "elementTypes": [
+        "RDS"
+      ]
     }
   }
 }

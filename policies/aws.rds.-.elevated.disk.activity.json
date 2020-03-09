@@ -39,7 +39,9 @@
     "enabled": true,
     "name": "AWS RDS - Elevated Disk Activity",
     "scope": {
-      "elementType": "RDS"
+      "elementTypes": [
+        "RDS"
+      ]
     }
   }
 }
